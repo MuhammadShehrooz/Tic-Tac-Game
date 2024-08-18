@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(34,40,50);
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.heading{
+    color: rgb(253,44,92);
+    margin-bottom: 20px;
+}
+
+.flex-turn{
+    display: flex;
+    /* background-color: red; */
+
+}
+
+#turn-X{
+    width: 60px;
+    height: 30px;
+    background-color:rgb(253,44,92) ;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+
+#turn-O{
+    width: 60px;
+    height: 30px;
+    /* background-color: red; */
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.grid-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 2px solid black;
+}
+
+.boxes{
+    width: 70px;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 30px;
+    align-self: center;
+}
+
+.boxes:hover{
+    background-color: rgb(253,44,92);
+    cursor: pointer;
+}
+
+#reset , #play-again{
+    background-color: rgb(253,44,92);
+    color: white;
+    border: none;
+    width:90px;
+    height: 40px;
+    margin-top: 25px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#reset:hover , #play-again:hover{
+    background-color: rgb(255, 0, 60);
+}
+
+.green{
+   background-color: rgb(5,218,215);
+}
+
+#reset , #play-again{
+    display: none;
+}
+
+#WinnerName{
+    margin-top: 30px;
+}
+
+@media (max-width:700px) {
+    .boxes{
+        width: 40px;
+        height: 15px;
+    }
+    .boxes img{
+        width: 35px;
+    }
+}
