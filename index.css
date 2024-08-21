@@ -63,7 +63,9 @@ body{
     border: 2px solid black;
     text-align: center;
     padding: 30px;
-    align-self: center;
+   display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .boxes:hover{
