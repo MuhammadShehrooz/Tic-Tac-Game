@@ -35,7 +35,7 @@ const checkwinner = () => {
                 boxes[a].style.backgroundColor = "rgb(5,218,215)";
                 boxes[b].style.backgroundColor = "rgb(5,218,215)";                
                 boxes[c].style.backgroundColor = "rgb(5,218,215)";                
-            }, 1000);
+            }, 100);
             
             boxes.forEach(box => {
                 box.style.pointerEvents="none"
