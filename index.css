@@ -53,6 +53,16 @@ body{
     
 }
 
+@media (max-width:270px){
+    
+    .playcard{
+        width: 280px;
+        height: 130px;
+        font-size: 9px;
+    }
+
+}
+
 #player-name-container{
     height: 100vh;
     display: flex;
