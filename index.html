@@ -8,11 +8,40 @@
     <title>Tic Tac Game</title>
 </head>
 <body>
-    <h1 class="heading">Tic Tac Game</h1>
-    <h2 id="turnfor">Turn For</h2>
+
+    <div id="ask-play">
+        <div class="playcard">
+            <h2>Lets tap the OK button to play the Game</h2>
+            <button id="ok-btn">Ok</button>
+        </div>
+    </div>
+
+    <div id="player-name-container">
+        <h1 class="player-name-heading">Enter Player Names</h1>
+        <div id="player-X-name-container"> 
+            <img id="player-X-img"  src="X-image.png" width="30px">           
+            <input id="player-X-name" type="test" placeholder="Player One">
+        </div>
+        <div id="player-O-name-container">
+            <img id="player-O-img" src="O-image.png" width="35px">   
+            <input id="player-O-name" type="test" placeholder="Player Two">
+        </div>
+        <button id="start-game-btn">Start Game</button>
+    </div>
+
+    <div id="M-game">
+
+        <h1 class="heading">Tic Tac Game</h1>
+        <h2 id="turnfor">Turn For</h2>
     <div class="flex-turn">
-    <div id="turn-X"><b>X</b></div>
-    <div id="turn-O"><b>O</b></div>
+    <div id="turn-X">
+        <h4 id="turn-X-heading"></h4>
+        <b>X</b>
+    </div>
+    <div id="turn-O">
+        <h4 id="turn-O-heading"></h4>
+        <b>O</b>
+    </div>
     </div>
     <div class="grid-container">
         <div class="boxes box1 " data-value=""><img src="" width="60px"></div>
@@ -25,9 +54,27 @@
         <div class="boxes box8 " data-value=""><img src="" width="60px"></div>
         <div class="boxes box9 " data-value=""><img src="" width="60px"></div>
     </div>
+    <div id="player-score">
+        <div id="player-X-score">
+            <h4 id="player-X-count-heading"></h4>
+            <b id="player-X-count"></b>
+        </div>
+        <div id="draw-score">
+            <h4 id="draw-count-heading">Draw</h4>
+            <b id="draw-count"></b>
+        </div>
+        <div id="player-O-score">
+            <h4 id="player-O-count-heading"></h4>
+            <b id="player-O-count"></b>
+        </div>
+    </div>
     <h3 id="WinnerName"></h3>
     <button id="reset"><b>Reset</b></button>
-    <button id="play-again"><b>Play Again</b></button>
+    <div id="play-again-chng-player-names">
+        <button id="play-again"><b>Play Again</b></button>
+        <button id="chng-player-names-btn"><b>Chng Player Names</b></button>
+    </div>
    <script src="index.js"></script> 
+</div>
 </body>
 </html>
