@@ -1,16 +1,122 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
     background-color: rgb(34,40,50);
     color:white;
+}
+
+#ask-play{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.playcard{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253,44,92);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px 2px black;
+}
+#ok-btn{
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(5,218,215);
+    color:white;
+    border: none;
+    border-radius: 2px;
+}
+
+#ok-btn:hover{
+    background-color: rgb(49, 187, 185);
+}
+
+@media (max-width:700px){
+    
+        .playcard{
+            width: 300px;
+            height: 150px;
+            font-size: 10px;
+        }
+    
+}
+
+#player-name-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.player-name-heading{
+    color: rgb(253,44,92);
+    margin-left: 25px
+}
+
+#player-X {
+    background-color: gray;
+}
+
+#player-O {
+    background-color: gray;
+}
+
+input{
+    width: 250px;
+    height: 40px;
+    border: none;
+    margin-top: 20px;
+    padding-left: 10px;
+    color: white;
+    background-color: gray;
+    caret-color: white;
+    border-radius: 4px;
+   }
+
+input:focus{
+    border: none;
+    outline: none;
+} 
+
+input::placeholder{
+    color: white;
+}
+
+#start-game-btn{
+    width: 250px;
+    height: 40px;
+    color: white;
+    background-color: rgb(5,218,215);
+    margin-top: 20px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 50px;
+}
+
+#start-game-btn:hover{
+    background-color:rgb(49, 187, 185) ;
+}
+
+#M-game{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    display: none;
 }
 
 .heading{
@@ -20,34 +126,88 @@ body{
 
 .flex-turn{
     display: flex;
-    /* background-color: red; */
-
 }
 
 #turn-X{
-    width: 60px;
-    height: 30px;
+    width: 100px;
+    height: 60px;
     background-color:rgb(253,44,92) ;
     margin-top: 10px;
-    padding-top: 10px;
     text-align: center;
     border-top: 4px solid black;
     border-bottom: 4px solid black;
     border-left: 4px solid black;
     border-right: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
 }
 
 #turn-O{
-    width: 60px;
-    height: 30px;
-    /* background-color: red; */
+    width: 100px;
+    height: 60px;
     margin-top: 10px;
-    padding-top: 10px;
     text-align: center;
     border-top: 4px solid black;
     border-bottom: 4px solid black;
-    border-bottom: 4px solid black;
     border-right: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+
+#player-score{
+    display: flex;
+}
+
+#player-X-score{
+    width: 100px;
+    height: 60px;
+    background-color: rgb(253,44,92);
+    margin-top: 20px;
+    margin-right: 10px;
+    text-align: center;
+    /* border: 4px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+} 
+
+#player-O-score{
+    width: 100px;
+    height: 60px;
+    background-color: rgb(253,44,92);
+    margin-top: 20px;    
+    text-align: center;
+    /* border: 4px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+
+#draw-score{
+    width: 100px;
+    height: 60px;
+    background-color: rgb(253,44,92);
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 40px;
+    text-align: center;
+    /* border: 4px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+
+@media (max-width:700px){
+    #player-X-score , #player-O-score , #draw-score{
+        width: 70px;
+        height: 40px;
+    }
+
+    #player-X-count-heading , #player-O-count-heading , #draw-count-heading{
+        font-size: 12px;
+    }
 }
 
 .grid-container{
@@ -58,12 +218,12 @@ body{
 }
 
 .boxes{
-    width: 70px;
-    height: 30px;
+    width: 140px;
+    height: 80px;
     border: 2px solid black;
     text-align: center;
     padding: 30px;
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -73,18 +233,18 @@ body{
     cursor: pointer;
 }
 
-#reset , #play-again{
+#reset , #play-again , #player-X-score-btn , #player-O-score-btn , #draw-score-btn , #chng-player-names-btn{
     background-color: rgb(253,44,92);
     color: white;
     border: none;
     width:90px;
     height: 40px;
-    margin-top: 25px;
+    margin-top: 20px;
     border-radius: 3px;
     cursor: pointer;
 }
 
-#reset:hover , #play-again:hover{
+#reset:hover , #play-again:hover , #chng-player-names-btn:hover{
     background-color: rgb(255, 0, 60);
 }
 
@@ -92,12 +252,24 @@ body{
    background-color: rgb(5,218,215);
 }
 
-#reset , #play-again{
+#reset {
     display: none;
 }
 
+#play-again{
+    margin-right: 20px;
+}
+
+#play-again-chng-player-names{
+    display: flex;
+    display: none;
+    
+}
+
+
+
 #WinnerName{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 @media (max-width:700px) {
