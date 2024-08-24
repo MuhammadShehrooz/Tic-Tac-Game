@@ -229,13 +229,38 @@ Playagain.addEventListener("click", function () {
 });
 
 Chngplayernamesbtn.addEventListener("click" , function(){
+    boxes.forEach(box => {
+        box.dataset.value = "";
+        let image = box.querySelector("img");
+        image.src = "";
+
+        // Reset background color and pointer events
+        box.style.backgroundColor = "rgb(34,40,50)";
+        box.style.pointerEvents = "auto";
+
+        box.addEventListener("mouseover" , function(){
+            box.style.backgroundColor="rgb(253,44,92)";
+            box.style.cursor="pointer"
+        })
+        box.addEventListener("mouseout" , function(){
+            box.style.backgroundColor="rgb(34,40,50)"
+        })
+      
+    });
+    clickcounter=0;
+    gameactive=true;
     PlayerXname.value=""
     PlayerOname.value=""
     Mgame.style.display="none"
     Playernamecontainer.style.display="flex"
     Startgamebtn.style.pointerEvents="none"
     Startgamebtn.style.opacity="0.5"
-    Chngplayernamesbtn.style.display="none";
+    Playagainchngplayernames.style.display="none";
+    turnX.style.backgroundColor = "rgb(253,44,92)";
+    turnO.style.backgroundColor = "rgb(34,40,50)";
+    document.getElementsByClassName("flex-turn")[0].style.opacity = "1";
+    document.getElementById("WinnerName").textContent = ""; 
+    document.getElementById("turnfor").textContent = "Turn For";
     playerOwiningcount=0;
     playerXwiningcount=0;
     drawcount=0;
