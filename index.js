@@ -6,8 +6,10 @@ let playerOwiningcount=0;
 let drawcount=0;
 // let currentplayer = "X";
 // const playerX = 
-const Askplay = document.getElementById("ask-play");
-const Okbtn = document.getElementById("ok-btn");
+const Firstpage = document.getElementById("first-page");
+const Playbtn = document.getElementById("play-btn");
+const Selectmodepage = document.getElementById("select-mode-page");
+const Multiplayerbtn = document.getElementById("multi-player-btn");
 const Playernamecontainer = document.getElementById("player-name-container");
 const PlayerXname = document.getElementById("player-X-name");
 const PlayerOname = document.getElementById("player-O-name");
@@ -28,17 +30,22 @@ const Playagainchngplayernames= document.getElementById("play-again-chng-player-
 const Playagain = document.getElementById("play-again");
 const Chngplayernamesbtn = document.getElementById("chng-player-names-btn");
 
-Okbtn.addEventListener("click" , function(){
-    Askplay.style.display="none";
-    Playernamecontainer.style.display="flex"
-    if( PlayerXname.value==="" || PlayerXname.value==="" ){
-        Startgamebtn.style.pointerEvents="none"
-        Startgamebtn.style.opacity="0.5"
-    }
-    else{
-         Startgamebtn.style.pointerEvents="pointer"
-        Startgamebtn.style.opacity="1"
-    }
+Playbtn.addEventListener("click" , function(){
+    Firstpage.style.display="none";
+    Selectmodepage.style.display="flex"
+})
+
+Multiplayerbtn.addEventListener("click" , function(){
+        Selectmodepage.style.display="none"
+        Playernamecontainer.style.display="flex"
+        if( PlayerXname.value==="" || PlayerXname.value==="" ){
+            Startgamebtn.style.pointerEvents="none"
+            Startgamebtn.style.opacity="0.5"
+        }
+        else{
+             Startgamebtn.style.pointerEvents="pointer"
+            Startgamebtn.style.opacity="1"
+        }
 })
 
 PlayerXname.addEventListener("change" , function(){
@@ -264,4 +271,5 @@ Chngplayernamesbtn.addEventListener("click" , function(){
     playerOwiningcount=0;
     playerXwiningcount=0;
     drawcount=0;
+    winner=false;
 })
