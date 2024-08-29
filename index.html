@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Tic Tac logo.ico">
     <link rel="stylesheet" href="index.css">
-    <title>Tic Tac Game</title>
+    <title>Tic Tac Toe</title>
 </head>
 <body>
 
-    <div id="ask-play">
-        <div class="playcard">
-            <h2>Lets tap the OK button to play the Game</h2>
-            <button id="ok-btn">Ok</button>
-        </div>
+    <div id="first-page">
+            <h1 id="first-page-game-name">Tic Tac Toe</h1>
+                <img id="first-page-img" src="First-page-img.png">
+            <button id="play-btn">Let's Play</button>
+    </div>
+
+    <div id="select-mode-page">
+        <h1 id="select-mode-page-game-name">Tic Tac Toe</h1>
+        <img id="select-mode-page-img" src="First-page-img.png" width="350px">
+            <button id="single-player-btn">Single Player</button>
+            <button id="multi-player-btn">Multi Player</button>        
     </div>
 
     <div id="player-name-container">
+        <h1 id="player-name-container-game-name">Tic Tac Toe</h1>
+        <img id="player-name-container-img" src="First-page-img.png" width="200px">
         <h1 class="player-name-heading">Enter Player Names</h1>
         <div id="player-X-name-container"> 
             <img id="player-X-img"  src="X-image.png" width="30px">           
@@ -31,7 +39,7 @@
 
     <div id="M-game">
 
-        <h1 class="heading">Tic Tac Game</h1>
+        <h1 class="heading">Tic Tac Toe</h1>
         <h2 id="turnfor">Turn For</h2>
     <div class="flex-turn">
     <div id="turn-X">
