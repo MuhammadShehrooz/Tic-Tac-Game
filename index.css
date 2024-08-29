@@ -9,15 +9,70 @@ body{
     color:white;
 }
 
-#ask-play{
+#first-page{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* display: none; */
 }
 
-.playcard{
+#first-page-game-name , #select-mode-page-game-name , #player-name-container-game-name{
+    color: rgb(253,44,92);
+}
+
+#first-page-img{
+    width: 450px;
+    height: 450px;
+}
+
+#play-btn{
+    background-color: rgb(253,44,92);
+    color: white;
+    border: none;
+    width:130px;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#play-btn:hover , #single-player-btn:hover , #multi-player-btn:hover{
+    background-color: rgb(255, 0, 60);
+}
+
+#select-mode-page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#single-player-btn {
+    background-color: rgb(253,44,92);
+    color: white;
+    border: none;
+    width:200px;
+    height:50px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+#multi-player-btn{
+    background-color: rgb(253,44,92);
+    color: white;
+    border: none;
+    width:200px;
+    height: 50px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* .playcard{
     width: 500px;
     height: 200px;
     display: flex;
@@ -28,8 +83,8 @@ body{
     color: white;
     border-radius: 5px;
     box-shadow: 2px 2px 15px 2px black;
-}
-#ok-btn{
+} */
+/* #ok-btn{
     margin-top: 20px;
     width: 40px;
     height: 40px;
@@ -46,9 +101,9 @@ body{
 @media (max-width:700px){
     
         .playcard{
-            width: 305px;
+            width: 300px;
             height: 150px;
-            font-size: 9px;
+            font-size: 10px;
         }
     
 }
@@ -58,10 +113,10 @@ body{
     .playcard{
         width: 280px;
         height: 130px;
-        font-size: 7px;
+        font-size: 9px;
     }
 
-}
+} */
 
 #player-name-container{
     height: 100vh;
