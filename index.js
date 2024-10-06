@@ -197,7 +197,7 @@ Singleplayerstartgamebtn.addEventListener("click", function () {
         }
         //  else {
         //     if (gameactive && SingleplayerOname.value === "CPU") {
-        //         setTimeout(cpuMove, 2000); // Delay CPU move for realism
+        //         setTimeout(cpuMove, 1000); // Delay CPU move for realism
         //       }
         // }
       }
@@ -208,10 +208,10 @@ Singleplayerstartgamebtn.addEventListener("click", function () {
       }
 
       if (gameactive && SingleplayerOname.value === "CPU" && clickcounter % 2 === 0) {
-        setTimeout(cpuMove, 2000)}
+        setTimeout(cpuMove, 1000)}
         if (gameactive && SingleplayerXname.value === "CPU" && clickcounter % 2 === 0){
            
-            setTimeout(cpuMove, 2000)
+            setTimeout(cpuMove, 1000)
         
         } // Delay CPU move for realism
     })
