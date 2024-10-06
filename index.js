@@ -158,7 +158,7 @@ SingleplayerOname.addEventListener("change", updatesingleplayerButtonState);
 MultiplayerXname.addEventListener("change", updatemultiplayerButtonState);
 MultiplayerOname.addEventListener("change", updatemultiplayerButtonState);
 
-Singleplayerstartgamebtn.addEventListener("click", function () {
+Singleplayerstartgamebtn.addEventListener("click", async function () {
   Singleplayernamecontainer.style.display = "none";
   Mgame.style.display = "flex";
   TurnXheading.textContent = SingleplayerXname.value;
@@ -169,7 +169,9 @@ Singleplayerstartgamebtn.addEventListener("click", function () {
   PlayerOcount.textContent = 0;
   Drawcount.textContent = 0;
   playercategory=false;
+
   if(SingleplayerXname.value === "CPU"){
+   
     clickcounter++;
     if (gameactive && clickcounter % 2 !== 0) {
       setTimeout(cpuMove, 1000)
@@ -177,6 +179,7 @@ Singleplayerstartgamebtn.addEventListener("click", function () {
   };
   }
   boxes.forEach((box) => {
+     
     box.addEventListener("click", function () {
       clickcounter++;
   
@@ -194,12 +197,11 @@ Singleplayerstartgamebtn.addEventListener("click", function () {
             image.src = "X-image.png";
             this.dataset.value = "X";
           }
+          // box.style.pointerEvents = "none"
+          boxes.forEach((bpn) => {
+            bpn.style.pointerEvents = "none"
+          })
         }
-        //  else {
-        //     if (gameactive && SingleplayerOname.value === "CPU") {
-        //         setTimeout(cpuMove, 1000); // Delay CPU move for realism
-        //       }
-        // }
       }
       Reset.style.display = "block";
       checkwinner();
@@ -208,12 +210,27 @@ Singleplayerstartgamebtn.addEventListener("click", function () {
       }
 
       if (gameactive && SingleplayerOname.value === "CPU" && clickcounter % 2 === 0) {
-        setTimeout(cpuMove, 1000)}
+        setTimeout(cpuMove, 2000)
+        setTimeout(()=>{
+  
+          boxes.forEach((bpa) => {
+            bpa.style.pointerEvents = "auto"
+          })
+        },2500)
+      }
+      // box.style.pointerEvents = "auto"
         if (gameactive && SingleplayerXname.value === "CPU" && clickcounter % 2 === 0){
            
-            setTimeout(cpuMove, 1000)
+            setTimeout(cpuMove, 2000)
+            setTimeout(()=>{
+  
+              boxes.forEach((bpa) => {
+                bpa.style.pointerEvents = "auto"
+              })
+            },2500)
         
         } // Delay CPU move for realism
+
     })
 })
 });
