@@ -1,88 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Tic Tac logo.ico">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Tic Tac logo.ico" />
+    <link rel="stylesheet" href="index.css" />
     <title>Tic Tac Toe</title>
-</head>
-<body>
+  </head>
+  <body>
+    <section id="first-page">
+      <h1 id="first-page-game-name">Tic Tac Toe</h1>
+      <img id="first-page-img" src="First-page-img.png" />
+      <button id="play-btn">Let's Play</button>
+    </section>
 
-    <div id="first-page">
-            <h1 id="first-page-game-name">Tic Tac Toe</h1>
-                <img id="first-page-img" src="First-page-img.png">
-            <button id="play-btn">Let's Play</button>
-    </div>
+    <section id="select-mode-page">
+      <h1 id="select-mode-page-game-name">Tic Tac Toe</h1>
+      <img id="select-mode-page-img" src="First-page-img.png" width="350px" />
+      <button id="single-player-btn">Single Player</button>
+      <button id="multi-player-btn">Multi Player</button>
+    </section>
 
-    <div id="select-mode-page">
-        <h1 id="select-mode-page-game-name">Tic Tac Toe</h1>
-        <img id="select-mode-page-img" src="First-page-img.png" width="350px">
-            <button id="single-player-btn">Single Player</button>
-            <button id="multi-player-btn">Multi Player</button>        
-    </div>
+    <section id="single-player-name-container">
+      <h1 id="single-player-name-container-game-name">Tic Tac Toe</h1>
+      <img
+        id="single-player-name-container-img"
+        src="First-page-img.png"
+        width="200px"
+      />
+      <h2 id="select-player-in-single-player-heading">
+        Select Player As you Play
+      </h2>
+      <div id="radio-btns">
+        <p id="radio-btn-select">Select Any One :</p>
+        <input
+          type="radio"
+          id="X-radio-btn"
+          name="radio-input"
+          value="X-value"
+          checked
+        />
+        <label for="X-radio-btn">X</label>
+        <input
+          type="radio"
+          id="O-radio-btn"
+          name="radio-input"
+          value="O-value"
+        />
+        <label for="O-radio-btn">O</label>
+      </div>
+      <h1 class="single-player-name-heading">Enter Player Names</h1>
+      <div id="single-player-X-name-container">
+        <img id="single-player-X-img" src="X-image.png" width="30px" />
+        <input id="single-player-X-name" type="text" placeholder="Player One" />
+      </div>
+      <div id="single-player-O-name-container">
+        <img id="single-player-O-img" src="O-image.png" width="35px" />
+        <input id="single-player-O-name" type="text" placeholder="Player Two" />
+      </div>
+      <button id="single-player-start-game-btn">Start Game</button>
+    </section>
 
-    <div id="player-name-container">
-        <h1 id="player-name-container-game-name">Tic Tac Toe</h1>
-        <img id="player-name-container-img" src="First-page-img.png" width="200px">
-        <h1 class="player-name-heading">Enter Player Names</h1>
-        <div id="player-X-name-container"> 
-            <img id="player-X-img"  src="X-image.png" width="30px">           
-            <input id="player-X-name" type="test" placeholder="Player One">
+    <section id="multi-player-name-container">
+      <h1 id="multi-player-name-container-game-name">Tic Tac Toe</h1>
+      <img
+        id="multi-player-name-container-img"
+        src="First-page-img.png"
+        width="200px"
+      />
+      <h1 class="multi-player-name-heading">Enter Player Names</h1>
+      <div id="multi-player-X-name-container">
+        <img id="multi-player-X-img" src="X-image.png" width="30px" />
+        <input id="multi-player-X-name" type="text" placeholder="Player One" />
+      </div>
+      <div id="multi-player-O-name-container">
+        <img id="multi-player-O-img" src="O-image.png" width="35px" />
+        <input id="multi-player-O-name" type="text" placeholder="Player Two" />
+      </div>
+      <button id="multi-player-start-game-btn">Start Game</button>
+    </section>
+
+    <section id="M-game">
+      <h1 class="heading">Tic Tac Toe</h1>
+      <h2 id="turnfor">Turn For</h2>
+      <div class="flex-turn">
+        <div id="turn-X">
+          <h4 id="turn-X-heading"></h4>
+          <b>X</b>
         </div>
-        <div id="player-O-name-container">
-            <img id="player-O-img" src="O-image.png" width="35px">   
-            <input id="player-O-name" type="test" placeholder="Player Two">
+        <div id="turn-O">
+          <h4 id="turn-O-heading"></h4>
+          <b>O</b>
         </div>
-        <button id="start-game-btn">Start Game</button>
-    </div>
-
-    <div id="M-game">
-
-        <h1 class="heading">Tic Tac Toe</h1>
-        <h2 id="turnfor">Turn For</h2>
-    <div class="flex-turn">
-    <div id="turn-X">
-        <h4 id="turn-X-heading"></h4>
-        <b>X</b>
-    </div>
-    <div id="turn-O">
-        <h4 id="turn-O-heading"></h4>
-        <b>O</b>
-    </div>
-    </div>
-    <div class="grid-container">
-        <div class="boxes box1 " data-value=""><img src="" width="60px"></div>
-        <div class="boxes box2 " data-value=""><img src="" width="60px"></div>
-        <div class="boxes box3 " data-value=""><img src="" width="60px"></div>
-        <div class="boxes box4 " data-value=""><img src="" width="60px"></div>
-        <div class="boxes box5 " data-value=""><img src="" width="60px"></div>
-        <div class="boxes box6 " data-value=""><img src="" width="60px"></div>
-        <div class="boxes box7 " data-value=""><img src="" width="60px"></div>
-        <div class="boxes box8 " data-value=""><img src="" width="60px"></div>
-        <div class="boxes box9 " data-value=""><img src="" width="60px"></div>
-    </div>
-    <div id="player-score">
+      </div>
+      <div class="grid-container">
+        <div class="boxes box1" data-value=""><img src="" width="60px" /></div>
+        <div class="boxes box2" data-value=""><img src="" width="60px" /></div>
+        <div class="boxes box3" data-value=""><img src="" width="60px" /></div>
+        <div class="boxes box4" data-value=""><img src="" width="60px" /></div>
+        <div class="boxes box5" data-value=""><img src="" width="60px" /></div>
+        <div class="boxes box6" data-value=""><img src="" width="60px" /></div>
+        <div class="boxes box7" data-value=""><img src="" width="60px" /></div>
+        <div class="boxes box8" data-value=""><img src="" width="60px" /></div>
+        <div class="boxes box9" data-value=""><img src="" width="60px" /></div>
+      </div>
+      <div id="player-score">
         <div id="player-X-score">
-            <h4 id="player-X-count-heading"></h4>
-            <b id="player-X-count"></b>
+          <h4 id="player-X-count-heading"></h4>
+          <b id="player-X-count"></b>
         </div>
         <div id="draw-score">
-            <h4 id="draw-count-heading">Draw</h4>
-            <b id="draw-count"></b>
+          <h4 id="draw-count-heading">Draw</h4>
+          <b id="draw-count"></b>
         </div>
         <div id="player-O-score">
-            <h4 id="player-O-count-heading"></h4>
-            <b id="player-O-count"></b>
+          <h4 id="player-O-count-heading"></h4>
+          <b id="player-O-count"></b>
         </div>
-    </div>
-    <h3 id="WinnerName"></h3>
-    <button id="reset"><b>Reset</b></button>
-    <div id="play-again-chng-player-names">
+      </div>
+      <h3 id="WinnerName"></h3>
+      <button id="reset"><b>Reset</b></button>
+      <div id="play-again-chng-player-names">
         <button id="play-again"><b>Play Again</b></button>
-        <button id="chng-player-names-btn"><b>Chng Player Names</b></button>
-    </div>
-   <script src="index.js"></script> 
-</div>
-</body>
+        <button id="chng-single-players-name-btn">
+          <b>Chng Single Player Name</b>
+        </button>
+        <button id="chng-multi-players-name-btn">
+          <b>Chng Multi Player Name</b>
+        </button>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
 </html>
